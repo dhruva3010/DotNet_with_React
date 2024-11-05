@@ -8,10 +8,12 @@ import 'semantic-ui-css/semantic.min.css'
 import { StoreContext, store } from './app/stores/store.ts'
 import { router } from './app/router/Routes.tsx'
 import { RouterProvider } from 'react-router-dom'
+import ModalContainer from './app/common/modals/ModalContainer.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <StoreContext.Provider value={store}>
+      <ModalContainer />
       <RouterProvider router={router} />
     </StoreContext.Provider>
   </StrictMode>,
